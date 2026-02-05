@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* EduLearn LMS Design System
+   A modern, professional EdTech design language
+   Colors: Dark Navy + Bright Blue + Clean White
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    /* Core palette */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Brand Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light Gray */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Extended palette */
+    --navy: 222 47% 11%;
+    --navy-light: 217 33% 17%;
+    --blue: 217 91% 60%;
+    --blue-light: 217 91% 70%;
+    --blue-glow: 217 91% 80%;
+
+    /* Feature accent colors */
+    --feature-blue: 217 91% 60%;
+    --feature-purple: 270 70% 60%;
+    --feature-green: 142 71% 45%;
+    --feature-orange: 32 95% 55%;
+    --feature-pink: 330 80% 60%;
+
+    /* Dashboard dark */
+    --dashboard-bg: 222 47% 11%;
+    --dashboard-card: 217 33% 17%;
+    --dashboard-border: 217 33% 25%;
+
+    /* Sidebar */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 220 14% 96%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 220 14% 96%;
+    --sidebar-border: 217 33% 25%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 220 14% 96%;
+
+    --card: 217 33% 17%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 217 33% 17%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 220 14% 96%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 220 14% 96%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 217 91% 60%;
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 220 14% 96%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 15%;
+    --sidebar-accent-foreground: 220 14% 96%;
+    --sidebar-border: 217 33% 20%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent;
+  }
+
+  .section-light {
+    @apply bg-secondary;
+  }
+
+  .section-dark {
+    @apply bg-navy text-white;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-border shadow-lg;
+  }
+
+  .feature-card {
+    @apply bg-white rounded-xl shadow-sm border border-border p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .dashboard-card {
+    @apply bg-dashboard-card border border-dashboard-border rounded-xl;
+  }
+}
